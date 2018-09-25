@@ -1,0 +1,334 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    background-color: wheat;
+}
+.cacheItems{
+    display: none;
+}
+.menu{
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    padding: 8px;
+}
+.item{
+    list-style-type: none;
+}
+a.lienMenu{
+    color: white;
+    padding: 8px;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    margin: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.btn{
+    margin-top: 30px;
+    
+    display: flex;
+    justify-content: center;
+}
+button{
+    padding: 10px;
+    font-size: 30px;
+    margin: 10px;
+    background-color:chocolate;
+    border: none;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+}
+button:hover{
+    box-shadow: 0px 2px 5px 3px grey;
+}
+a, h3, small, p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav .icon {
+  display: none;
+}
+.catalogue{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.carte { 
+  width: 300px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 5px 3px grey;
+  margin: 20px;
+  transition: transform 1s;
+  background-color: white;
+}
+/*	  la carte bouge vers la droite*/
+.carte:hover{
+  transform: translate(2px,2px);
+}
+h3{
+  margin: 0;
+}
+h4{
+    font-size: 26px;
+}
+.des{
+    padding: 0;
+}
+.header{
+  padding: 16px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom:  1px solid grey;
+}
+/*fin cartes*/
+/*	  A l'entete */
+.side{
+  margin-left: 10px;
+}
+.icone{
+    margin-left: 125px;
+}
+.gris{
+    color: gainsboro;
+}
+.rouge{
+    color: red;
+}
+/*fin entete*/
+/*	  Réduire et positionner l'image*/
+.crop{
+  overflow: hidden;
+  height: 168.8px;
+}
+.image{
+    margin-top: -270px;
+    width: 300px;
+    top: 50%;
+}
+.imageBiere{
+    width: 300px;
+    top: 50%;
+}
+.container{
+  border-top:  1px solid grey;
+}
+/*fin image*/
+.coeur{
+        margin-left: 280px;
+    }
+p{
+  padding: 16px;
+  margin: 0;
+}
+
+section>a{
+  color: black;
+  margin: 8px;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  transition: background-color 4s, transform 4s;
+  padding: 10px;
+}
+.action{
+    display: flex;
+    justify-content: center;
+}
+/*	  Faire un bouton qui grossi et change de couleur*/
+section>a:hover{
+  transform:scale(1.2); 
+  background-color:burlywood;
+}
+/*fin*/ 
+.arrow{
+    display: none;
+}
+
+
+#toggle{
+    position: absolute;
+    height: 40px;
+    width: 60px;
+    margin-top: -10px;
+}
+.bulle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dansBulle{
+    margin-left: 50px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    html{
+        overflow-x: hidden;
+    }
+/*hamburger*/
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js*/
+    .containHamburger {
+        display: inline-block;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        background-color: #333;
+    }
+    .hamburger{
+        margin-top: 3px;
+        margin-right: 10px;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        transform: rotate(45deg) translate(-8px, -8px) ;
+    }
+/*fin hamburger*/
+    .menu{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+/*    menu*/
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav*/
+    .menu.topnav li.item {
+        display: none;
+    }
+    .menu.topnav.responsive {
+        position: relative;
+    }
+    .menu.topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .menu.topnav.responsive li.item {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+/*    fin menu*/
+    li.item{
+        padding: 8px;
+    }
+    .bulle{
+        margin-top: 120px;
+        margin-bottom: 150px;
+    }
+    p{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+@media screen and (max-width: 375px){
+    html{
+        overflow-x: hidden;
+    }
+    body{
+        background: wheat;
+    }
+    main{
+        margin-left: -10px;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+/*hamburger*/
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js*/
+    .containHamburger {
+        display: inline-block;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #333;
+    }
+    .hamburger{
+        margin-top: 3px;
+        margin-right: 10px;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        transform: rotate(45deg) translate(-8px, -8px) ;
+    }
+/*fin hamburger*/
+/*    menu*/
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav*/
+    .menu.topnav li a{
+        display: none;
+    }
+    .menu.topnav.responsive {
+        position: relative;
+    }
+    .menu.topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .menu.topnav.responsive  li a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .imageBiere{
+      width: 100px;
+    }
+    .bulle{
+        margin-top: 125px;
+        margin-bottom: 130px;
+    }
+    p{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}

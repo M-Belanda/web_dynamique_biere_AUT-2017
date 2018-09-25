@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">        
+        <meta name="author" content="Bélanda">
+        <meta name="description" content="app de biere">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="src/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <script src="biere/dataMenu.js"></script>
+        <script src="biere/catalogue.js"></script>
+        <script src="biere/dataBieres.js"></script>
+        <script src="biere/Bieres.js"></script>
+        <script src="src/App.js"></script>
+        <script src="src/animation.js"></script>
+        <script src="src/storage.js"></script>
+        
+    </head>
+
+    <body>
+<!--
+        <template id="tplMenu">
+            <li class="item"><a class="lienMenu" href="{{url}}">{{nom}}</a></li>
+        </template>
+-->
+        <template id="tplBiere">
+            <article class="carte">
+              <div class="header">
+                  <div class="circle"></div>
+                  <div class="side">
+                      <h3>{{nom}}</h3>
+                      <small>{{brasserie}}</small>
+                  </div>
+                  <div class="icone">
+                      <i class="fa fa-heart gris"></i>
+                  </div>
+              </div>
+              <div class="crop">
+                <img class="image" src="{{source}}">
+              </div>
+              <div class="container"> 
+                  <div class="arrow">
+                      <p>{{description}}</p>
+                  </div>
+              </div>
+              <section class="action">
+                  <a href="#">Achat</a>
+                  <a href="#">Détail</a>
+              </section>
+          </article>
+        </template>
+        <template id="tplInfo">
+            <article class="info">
+                <div class="bulle">
+                    <img class="imageBiere" src="{{source}}">
+                    <div class="dansBulle">
+                        <div class="coeur">
+                            <i class="fa fa-heart gris"></i>
+                        </div>
+                        <h4>Nom: {{nom}}</h4>
+                        <h4>Brasserie: {{brasserie}}</h4>
+                        <h4>Type: {{type}}</h4>
+                        <h4>Format: {{format}}</h4>
+                        <p class="des">{{description}}</p>
+                    </div>
+                </div>
+            </article>
+        </template>
+         <header class="cacher1">
+            <h1>Librairie de bière</h1>
+         <nav class="" > <!--   https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav-->
+             <div class="containHamburger"><!--onclick="hamburger(this)"--><!-- https://www.w3schools.com/howto/tryit.asp?xzfilename=tryhow_css_menu_icon_js-->
+                  <div class="hamburger">
+                      <div class="bar1"></div>
+                      <div class="bar2"></div>
+                      <div class="bar3"></div>
+                  </div>
+                </div>
+             <ul class="menu topnav" id="myTopnav">
+                    <li class="item"><a class="lienMenu" href="index.html">Liste de biere</a></li>
+             </ul>           
+            </nav>
+        </header>
+        <main>
+            <div class="btn btna">
+                <button class="ordreTitre">Titre</button>
+                <button class="ordreBrasserie">Brasserie</button>
+                <button class="ordreType">Type</button>
+            </div>
+        <aside>
+            <div id="biere"></div>
+            <div id="biereCote"></div>
+        </aside>
+          <section>
+              <article class="catalogue">
+              </article>
+          </section>
+        </main>
+    </body>
+</html>
+        
+        
+        
+
+        
